@@ -1,0 +1,124 @@
+/*O logo muda de posiçao*/
+
+* {
+  margin: 0;
+}
+
+/*O corpo: cores do nomezinho Carolina Dias*/
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
+
+  /*FONTE*/
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*FUNDO: NO CENTRO*/
+body {
+  display: grid;
+  place-items: center;
+}
+
+/*FUNDO DEGRADÊ - CENTER/COVER - FUNDO NA TELA INTERIRA*/
+main {
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+@media (min-width: 960px) {
+  body {
+    background: #121214;
+  }
+
+  main {
+    background: url(images/Desktop-background.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 812px;
+    height: 100vh;
+  }
+}
+
+/*POSICIONAMENTO DOS ITENS + COR DA FONTE*/
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.faixa img {
+  margin-left: 9rem;
+  margin-top: 9rem;
+  position: absolute;
+}
+
+/*POSICIONAMENTO DOS ITENS, FOTO, FONTE...*/
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+
+  position: relative;
+}
+
+/*POSIÇAO DA FOTO*/
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+/*MOLDE DA FOTO*/
+
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover;
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+/*ESCRITA*/
+h1 {
+  font-size: 1.5rem;
+
+  margin-top: 1.5rem;
+}
+
+/*GIT, CORES DAS FONTES*/
+a {
+  color: var(--grey);
+  text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/*MARGIN DE UM TEXTO PARA O OUTRO: GITHUB + APRENDENDO A PROGRAMAR*/
+p {
+  margin-top: 2rem;
+}
+
+/*ESPAÇAMENTO DOS ICONES */
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+
+  justify-content: center;
+}
